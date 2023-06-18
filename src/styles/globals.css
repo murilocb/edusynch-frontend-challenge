@@ -18,10 +18,29 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-180%);
+  }
+}
+
+.slide {
+  animation: slider 9s linear infinite;
+}
+
+.bg-color-newsletter {
+  background-image: linear-gradient(97.85deg, #FBAB34 -5.87%, #AD721A 118.06%),
+    url('/public/images/maskNewsletter.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
 }
