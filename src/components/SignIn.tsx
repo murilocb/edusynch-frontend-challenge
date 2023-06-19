@@ -8,6 +8,7 @@ import SignUp from './SignUp';
 import { useModal } from '@/utils/handleModals';
 import { validateEmail } from '@/utils/validateEmail';
 import ErrorMessage from './ErrorMessage';
+import Button from './Button';
 
 const SignIn = ({ onClose }: any) => {
   const [email, setEmail] = useState('');
@@ -54,9 +55,9 @@ const SignIn = ({ onClose }: any) => {
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-white pt-12 pb-12 pl-12 pr-12 rounded-md shadow-md max-w-md w-full">
         <div className="flex justify-end -mt-8 -mr-8">
-          <button onClick={handleClose} className="text-gray-600">
+          <Button onClick={handleClose} className="text-gray-600">
             <VscClose className="opacity-60" size={20} />
-          </button>
+          </Button>
         </div>
         <div className="flex justify-center items-center mb-4 mt-2">
           <span className="text-xl">
@@ -97,13 +98,13 @@ const SignIn = ({ onClose }: any) => {
                 required
               />
             </div>
-            <button
+            <Button
               type="button"
               className="absolute top-1/2 right-2 transform -translate-y-1/2 text-gray-500 opacity-40"
               onClick={togglePasswordVisibility}
             >
               {showPassword ? <BsEyeSlash /> : <BsEye />}
-            </button>
+            </Button>
           </div>
           {emailOrPasswordError && (
             <ErrorMessage message={emailOrPasswordError} />
@@ -117,22 +118,22 @@ const SignIn = ({ onClose }: any) => {
             </Link>
           </div>
           <div className="flex justify-center">
-            <button
+            <Button
               type="submit"
               className="bg-customYellow text-white w-full md:w-full h-10 md:h-12 rounded-full"
             >
               Sign In
-            </button>
+            </Button>
           </div>
           <div className="flex justify-center items-center mt-4 -mb-6">
-            <button onClick={handleSignUpClick}>
+            <Button onClick={handleSignUpClick}>
               <span className="text-sm font-light">
                 Don't have an account?
                 <span className="font-bold text-gray-600"> Sign up to</span>
                 <span className="text-customYellow font-bold"> Coin</span>
                 <span className="font-bold text-gray-400">Synch</span>
               </span>
-            </button>
+            </Button>
             {showSignUpModal && <SignUp onClose={handleCloseSignUpModal} />}
           </div>
         </form>

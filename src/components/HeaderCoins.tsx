@@ -2,7 +2,7 @@ interface Props {}
 
 export function HeaderCoins(props: Props) {
   return (
-    <div className="flex overflow-hidden ml-auto mr-10">
+    <div className="flex overflow-hidden ml-auto mx-auto">
       <div className="slide flex md:space-x-6">
         <div className="flex space-x-2">
           <p>BIT</p>

@@ -4,7 +4,7 @@ interface Props {}
 
 export function Footer(props: Props) {
   return (
-    <div className="flex justify-center items-center space-x-96 mb-6 -mt-4">
+    <div className="flex justify-center items-center space-x-80 mb-6 -mt-4">
       <p className="text-sm text-dark sm:text-base md:text-base lg:text-base xl:text-base">
         Copyright © {new Date().getFullYear()} - All rights reserved
       </p>

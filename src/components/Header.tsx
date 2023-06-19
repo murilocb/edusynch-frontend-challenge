@@ -3,6 +3,7 @@ import { HeaderCoins } from './HeaderCoins';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import { useModal } from '@/utils/handleModals';
+import Button from './Button';
 
 interface Props {}
 
@@ -27,7 +28,7 @@ export function Header(props: Props) {
   };
 
   return (
-    <header className="flex justify-between items-center bg-white h-16 w-full px-36">
+    <header className="flex justify-center items-center h-16 w-full px-96">
       <div className="flex space-x-8">
         <Image
           src="/svgs/CoinSynch.svg"
@@ -45,16 +46,16 @@ export function Header(props: Props) {
       <HeaderCoins />
 
       <div className="flex">
-        <button onClick={handleSignInClick} className="text-base">
+        <Button onClick={handleSignInClick} className="text-base">
           Sign in
-        </button>
+        </Button>
         {showSignInModal && <SignIn onClose={handleCloseSignInModal} />}
-        <button
+        <Button
           onClick={handleSignUpClick}
           className="bg-customYellow w-32 h-10 rounded-full text-white text-base ml-8"
         >
           Sign up
-        </button>
+        </Button>
         {showSignUpModal && <SignUp onClose={handleCloseSignUpModal} />}
       </div>
     </header>

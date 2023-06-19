@@ -8,6 +8,7 @@ import { useModal } from '@/utils/handleModals';
 import SignIn from './SignIn';
 import { validateEmail } from '@/utils/validateEmail';
 import ErrorMessage from './ErrorMessage';
+import Button from './Button';
 
 const SignUp = ({ onClose }: any) => {
   const [name, setName] = useState('');
@@ -76,12 +77,12 @@ const SignUp = ({ onClose }: any) => {
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white pt-12 pb-12 pl-12 pr-12 rounded-md shadow-md max-w-md w-full">
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30">
+      <div className="bg-white pt-12 pb-12 pl-12 pr-12 rounded-md shadow-md max-w-md">
         <div className="flex justify-end -mt-8 -mr-8">
-          <button onClick={handleClose} className="text-gray-600">
+          <Button onClick={handleClose} className="text-gray-600">
             <VscClose className="opacity-60" size={20} />
-          </button>
+          </Button>
         </div>
         <div className="flex justify-center items-center mb-6 mt-2">
           <span className="text-xl">
@@ -147,13 +148,13 @@ const SignUp = ({ onClose }: any) => {
                 required
               />
             </div>
-            <button
+            <Button
               type="button"
               className="absolute top-1/3 right-2 text-gray-500 opacity-40"
               onClick={togglePasswordVisibility}
             >
               {showPassword ? <BsEyeSlash /> : <BsEye />}
-            </button>
+            </Button>
           </div>
           {passwordError && <ErrorMessage message={passwordError} />}
           <div className="mb-6 relative">
@@ -176,13 +177,13 @@ const SignUp = ({ onClose }: any) => {
                 required
               />
             </div>
-            <button
+            <Button
               type="button"
               className="absolute top-1/3 right-2 text-gray-500 opacity-40"
               onClick={toggleConfirmPasswordVisibility}
             >
               {showConfirmPassword ? <BsEyeSlash /> : <BsEye />}
-            </button>
+            </Button>
           </div>
           {confirmPasswordError && (
             <ErrorMessage message={confirmPasswordError} />
@@ -208,23 +209,23 @@ const SignUp = ({ onClose }: any) => {
             </label>
           </div>
           <div className="flex justify-center">
-            <button
+            <Button
               type="submit"
               className="bg-customYellow text-white w-full md:w-full h-10 md:h-12 rounded-full"
             >
               Sign Up
-            </button>
+            </Button>
           </div>
         </form>
         <div className="flex justify-center items-center mt-4 -mb-6">
-          <button onClick={handleSignInClick}>
+          <Button onClick={handleSignInClick}>
             <span className="text-sm font-light">
               Already have an account?
               <span className="font-bold text-gray-600"> Sign in to</span>
               <span className="text-customYellow font-bold"> Coin</span>
               <span className="font-bold text-gray-400">Synch</span>
             </span>
-          </button>
+          </Button>
           {showSignInModal && <SignIn onClose={handleCloseSignInModal} />}
         </div>
       </div>
