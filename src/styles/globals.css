@@ -38,9 +38,42 @@ body {
 }
 
 .bg-color-newsletter {
-  background-image: linear-gradient(97.85deg, #FBAB34 -5.87%, #AD721A 118.06%),
+  background: linear-gradient(97.85deg, #FBAB34 -5.87%, #AD721A 118.06%),
     url('/public/images/maskNewsletter.png');
   background-repeat: no-repeat;
   background-position: right center;
   background-size: contain;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*.waveb1 {
+  position: absolute;
+  height: 387px;
+  width: 1775px;
+  left: 1659px;
+  background: linear-gradient(180deg, rgba(251, 171, 52, 0.2) 4.4%, rgba(251, 171, 52, 0) 87.49%);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+ .waveb2 {
+  position: absolute;
+  width: 1567.85px;
+  height: 512.71px;
+  left: -239px;
+  top: 0;
+  background: linear-gradient(180deg, rgba(251, 171, 52, 0.2) -5.39%, rgba(251, 171, 52, 0) 83.69%);
+  transform: matrix(-1, 0.08, 0.22, 0.98, 0, 0);
+}
+
+.waveb3 {
+  position: absolute;
+  width: 1617.03px;
+  height: 456.58px;
+  left: -238px;
+  top: -74px;
+  background: linear-gradient(180deg, rgba(251, 171, 52, 0.2) 0%, rgba(251, 171, 52, 0) 71.26%);
+  transform: matrix(-1, 0.08, 0.22, 0.98, 0, 0);
+} */

@@ -93,9 +93,9 @@ const TopCryptos = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center mt-40">
+    <div id="top-cryptos" className="flex flex-col items-center justify-center mt-40">
       <p className='font-bold text-5xl mb-20 text-color-text'>Top Cryptos</p>
-      <table className={`table-fixed w-1216 ${tableHeight}`}>
+      <table className={`table-fixed w-1440 ${tableHeight}`}>
         <thead>
           <tr>
             <th className="py-2 text-color-text font-extralight">#</th>
@@ -108,11 +108,11 @@ const TopCryptos = () => {
         <tbody>
         {data.map((item, index) => (
             <tr key={item.id} className="hover:bg-gray-100">
-              <td className="py-2 pl-28">{index < 9 ? '0' + item.id : item.id}</td>
-              <td className="py-2 pl-24">{' '}{item.crypto}</td>
-              <td className="py-2 pl-24">{item.price}</td>
-              <td className={`py-2 pl-24 ${item.change.includes('-') ? 'text-red-500' : 'text-green-500'}`}>{item.change}</td>
-              <td className="py-2 pl-24"><button
+              <td className="py-2 pl-32">{index < 9 ? '0' + item.id : item.id}</td>
+              <td className="py-2 pl-28">{' '}{item.crypto}</td>
+              <td className="py-2 pl-28">{item.price}</td>
+              <td className={`py-2 pl-28 ${item.change.includes('-') ? 'text-red-500' : 'text-green-500'}`}>{item.change}</td>
+              <td className="py-2 pl-28"><button
                   className="bg-green-600 py-1 px-2 w-24 h-10 rounded-full text-white"
                   onClick={() => handleBuy(item.crypto)}
                 >

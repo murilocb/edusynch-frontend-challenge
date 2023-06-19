@@ -4,7 +4,7 @@ import Button from './Button';
 import CustomContent from './CustomContent';
 import SignUp from './SignUp';
 
-const ContentCrypto = () => {
+const AboutUs = () => {
   const [
     showSignInModal,
     showSignUpModal,
@@ -39,7 +39,7 @@ const ContentCrypto = () => {
   };
 
   return (
-    <div className="flex w-full h-full pb-40 justify-center items-center mt-72 bg-gradient-to-b from-transparent to-[#F7F7F7]">
+    <div id="about-us" className="flex w-full h-full pb-40 justify-center items-center mt-72 bg-gradient-to-b from-transparent to-[#F7F7F7]">
       <div className="grid grid-cols-2 gap-12">
         <div className="col-span-1">
           <Box imageSrc="/images/Bitcoin.png" altText="Bitcoin" />
@@ -73,4 +73,4 @@ const ContentCrypto = () => {
   );
 };
 
-export default ContentCrypto;
+export default AboutUs;

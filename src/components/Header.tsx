@@ -28,25 +28,42 @@ export function Header(props: Props) {
   };
 
   return (
-    <header className="flex justify-center items-center h-16 w-screen px-96 mx-auto">
+    <header className="flex justify-center items-center h-16 w-full px-96 mx-auto">
       <div className="flex space-x-8">
-        <Image
-          src="/svgs/CoinSynch.svg"
-          alt="CoinSynch Logo"
-          width={124}
-          height={21}
-          priority
-        />
+        <a href="#home">
+          <Image
+            src="/svgs/CoinSynch.svg"
+            alt="CoinSynch Logo"
+            width={124}
+            height={21}
+            priority
+          />
+        </a>
         <div className="flex space-x-6">
-          <p className="text-gray-700 text-base">About us</p>
-          <p className="text-gray-700 text-base">Top Cryptos</p>
+          <a
+            href="#about-us"
+            className="text-gray-700 text-base"
+            scroll-behavior="smooth"
+          >
+            About us
+          </a>
+          <a
+            href="#top-cryptos"
+            className="text-gray-700 text-base"
+            scroll-behavior="smooth"
+          >
+            Top Cryptos
+          </a>
         </div>
       </div>
 
       <HeaderCoins />
 
       <div className="flex">
-        <Button onClick={handleSignInClick} className="text-base flex items-center justify-center">
+        <Button
+          onClick={handleSignInClick}
+          className="text-base flex items-center justify-center"
+        >
           Sign in
         </Button>
         {showSignInModal && <SignIn onClose={handleCloseSignInModal} />}

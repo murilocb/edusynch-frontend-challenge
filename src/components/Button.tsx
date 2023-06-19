@@ -1,8 +1,6 @@
 import React, { ButtonHTMLAttributes } from 'react';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  // Add any additional custom props you need for your button
-  // For example, you can add a custom className prop
   className?: string;
 }
 

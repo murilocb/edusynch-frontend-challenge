@@ -3,7 +3,7 @@ import { Header } from '@/components/Header';
 import { ContentApresentation } from '@/components/ContentApresentation';
 import Newsletter from '@/components/Newsletter';
 import { ContentApresentationImage } from '@/components/ContentApresentationImage';
-import ContentCrypto from '@/components/ContentCrypto';
+import AboutUs from '@/components/AboutUs';
 import TopCryptos from '@/components/TopCryptos';
 
 export default function Home() {
@@ -12,10 +12,10 @@ export default function Home() {
       <Header />
       <ContentApresentation />
       <ContentApresentationImage />
-      <ContentCrypto />
+      <AboutUs />
       <TopCryptos />
-      {/* <Newsletter />
-      <Footer /> */}
+      <Newsletter/>
+      <Footer />
     </main>
   );
 }

@@ -63,7 +63,7 @@ export function ContentApresentation(props: Props) {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row w-full pt-36 pl-72 space-x-20 justify-center items-center">
+    <div id="home" className="flex flex-col md:flex-row w-full pt-36 pl-72 space-x-20 justify-center items-center">
     <div className="w-1/2">
       <div className="w-2/4 space-y-6">
         <p className="text-customYellow text-5xl font-bold leading-snug">

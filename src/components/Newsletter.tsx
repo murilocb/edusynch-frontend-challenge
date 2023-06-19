@@ -52,37 +52,37 @@ const Newsletter = () => {
   };
 
   return (
-    <div className="bg-color-newsletter w-full h-412 flex justify-center items-center">
-      <div className="flex">
-        <CustomContent
-          classNames={dynamicClassNames}
-          textContent={dynamicTextContent}
-        />
-        <form onSubmit={handleSubmit} className="flex-auto w-96 ml-96">
-          <label htmlFor="email" className="text-white block mb-1">
-            Email
-          </label>
-          <input
-            type="email"
-            value={email}
-            onChange={handleEmailChange}
-            className="w-full py-3 px-4 rounded shadow-lg"
-            placeholder="Email"
-            required
-            disabled={isLoading}
-          />
-          <Button
-            type="submit"
-            className="mt-4 bg-customYellow text-white py-3 px-4 rounded-full shadow-lg w-full"
-            disabled={isLoading}
-          >
-            {isLoading ? (
-              <Loading />
-            ) : (
-              'Subscribe'
-            )}
-          </Button>
-        </form>
+    <div className="w-full">
+      <div className="bg-color-newsletter h-412 flex justify-center items-center mt-28">
+        <div>
+          <div className="flex">
+            <CustomContent
+              classNames={dynamicClassNames}
+              textContent={dynamicTextContent}
+            />
+            <form onSubmit={handleSubmit} className="flex-auto w-96 ml-96">
+              <label htmlFor="email" className="text-white block mb-1">
+                Email
+              </label>
+              <input
+                type="email"
+                value={email}
+                onChange={handleEmailChange}
+                className="w-full py-3 px-4 rounded shadow-lg"
+                placeholder="Email"
+                required
+                disabled={isLoading}
+              />
+              <Button
+                type="submit"
+                className="mt-4 bg-customYellow text-white py-3 px-4 rounded-full shadow-lg w-full"
+                disabled={isLoading}
+              >
+                {isLoading ? <Loading /> : 'Subscribe'}
+              </Button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   );
