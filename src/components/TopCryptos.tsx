@@ -93,8 +93,11 @@ const TopCryptos = () => {
   };
 
   return (
-    <div id="top-cryptos" className="flex flex-col items-center justify-center mt-40">
-      <p className='font-bold text-5xl mb-20 text-color-text'>Top Cryptos</p>
+    <div
+      id="top-cryptos"
+      className="flex flex-col items-center justify-center mt-40"
+    >
+      <p className="font-bold text-5xl mb-20 text-color-text">Top Cryptos</p>
       <table className={`table-fixed w-1440 ${tableHeight}`}>
         <thead>
           <tr>
@@ -106,18 +109,33 @@ const TopCryptos = () => {
           </tr>
         </thead>
         <tbody>
-        {data.map((item, index) => (
-            <tr key={item.id} className="hover:bg-gray-100">
-              <td className="py-2 pl-32">{index < 9 ? '0' + item.id : item.id}</td>
-              <td className="py-2 pl-28">{' '}{item.crypto}</td>
+          {data.map((item, index) => (
+            <tr
+              key={item.id}
+              className={`${
+                index % 2 === 0 ? 'bg-gray-100' : ''
+              } hover:bg-gray-300`}
+            >
+              <td className="py-2 pl-32">
+                {index < 9 ? '0' + item.id : item.id}
+              </td>
+              <td className="py-2 pl-28"> {item.crypto}</td>
               <td className="py-2 pl-28">{item.price}</td>
-              <td className={`py-2 pl-28 ${item.change.includes('-') ? 'text-red-500' : 'text-green-500'}`}>{item.change}</td>
-              <td className="py-2 pl-28"><button
+              <td
+                className={`py-2 pl-28 ${
+                  item.change.includes('-') ? 'text-red-500' : 'text-green-500'
+                }`}
+              >
+                {item.change}
+              </td>
+              <td className="py-2 pl-28">
+                <button
                   className="bg-green-600 py-1 px-2 w-24 h-10 rounded-full text-white"
                   onClick={() => handleBuy(item.crypto)}
                 >
                   {item.trade}
-                </button></td>
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
