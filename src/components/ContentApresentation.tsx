@@ -69,7 +69,7 @@ export function ContentApresentation(props: Props) {
         <p className="text-customYellow text-5xl font-bold leading-snug">
           Lorem ipsum dolor sit amet, consectetur
         </p>
-        <p className="text-gray-800 text-xl leading-8">
+        <p className="text-color-text text-xl leading-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
           purus sit amet luctus venenatis, lectus magna fringilla urna,
           porttitor
