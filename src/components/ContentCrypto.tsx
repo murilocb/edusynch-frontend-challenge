@@ -39,7 +39,7 @@ const ContentCrypto = () => {
   };
 
   return (
-    <div className="flex justify-center items-center mt-72">
+    <div className="flex w-full h-full pb-40 justify-center items-center mt-72 bg-gradient-to-b from-transparent to-[#F7F7F7]">
       <div className="grid grid-cols-2 gap-12">
         <div className="col-span-1">
           <Box imageSrc="/images/Bitcoin.png" altText="Bitcoin" />

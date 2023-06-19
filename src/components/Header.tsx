@@ -28,7 +28,7 @@ export function Header(props: Props) {
   };
 
   return (
-    <header className="flex justify-center items-center h-16 w-full px-96">
+    <header className="flex justify-center items-center h-16 w-screen px-96 mx-auto">
       <div className="flex space-x-8">
         <Image
           src="/svgs/CoinSynch.svg"
@@ -46,13 +46,13 @@ export function Header(props: Props) {
       <HeaderCoins />
 
       <div className="flex">
-        <Button onClick={handleSignInClick} className="text-base">
+        <Button onClick={handleSignInClick} className="text-base flex items-center justify-center">
           Sign in
         </Button>
         {showSignInModal && <SignIn onClose={handleCloseSignInModal} />}
         <Button
           onClick={handleSignUpClick}
-          className="bg-customYellow w-32 h-10 rounded-full text-white text-base ml-8"
+          className="bg-customYellow w-32 h-10 rounded-full text-white text-base ml-8 flex items-center justify-center"
         >
           Sign up
         </Button>

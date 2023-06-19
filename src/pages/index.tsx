@@ -1,7 +1,10 @@
+import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 import { ContentApresentation } from '@/components/ContentApresentation';
+import Newsletter from '@/components/Newsletter';
 import { ContentApresentationImage } from '@/components/ContentApresentationImage';
 import ContentCrypto from '@/components/ContentCrypto';
+import TopCryptos from '@/components/TopCryptos';
 
 export default function Home() {
   return (
@@ -10,6 +13,9 @@ export default function Home() {
       <ContentApresentation />
       <ContentApresentationImage />
       <ContentCrypto />
+      <TopCryptos />
+      {/* <Newsletter />
+      <Footer /> */}
     </main>
   );
 }
