@@ -9,12 +9,14 @@ import { useModal } from '@/utils/handleModals';
 import { validateEmail } from '@/utils/validateEmail';
 import ErrorMessage from './ErrorMessage';
 import Button from './Button';
+import { useRouter } from 'next/router';
 
 const SignIn = ({ onClose }: any) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [emailOrPasswordError, setEmailOrPasswordError] = useState('');
+  const router = useRouter();
 
   const [
     showSignInModal,
@@ -38,6 +40,7 @@ const SignIn = ({ onClose }: any) => {
       setEmailOrPasswordError('Invalid email or password!');
     } else {
       setEmailOrPasswordError('');
+      router.push('/dashboard');
     }
   };
 

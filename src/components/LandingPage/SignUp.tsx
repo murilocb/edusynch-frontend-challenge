@@ -56,6 +56,9 @@ const SignUp = ({ onClose }: any) => {
       setConfirmPasswordError('Password and confirm password do not match');
       return;
     } else {
+      // After all the validation, the right thing is to create this in a database to validate a login
+      // How do this?
+      // Send via API to back-end to create in database
       setConfirmPasswordError('');
     }
   };

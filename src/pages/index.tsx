@@ -1,10 +1,10 @@
-import { Footer } from '@/components/Footer';
-import { Header } from '@/components/Header';
-import { ContentApresentation } from '@/components/ContentApresentation';
-import Newsletter from '@/components/Newsletter';
-import { ContentApresentationImage } from '@/components/ContentApresentationImage';
-import AboutUs from '@/components/AboutUs';
-import TopCryptos from '@/components/TopCryptos';
+import { Footer } from '@/components/LandingPage/Footer';
+import { Header } from '@/components/LandingPage/Header';
+import { ContentApresentation } from '@/components/LandingPage/ContentApresentation';
+import Newsletter from '@/components/LandingPage/Newsletter';
+import { ContentApresentationImage } from '@/components/LandingPage/ContentApresentationImage';
+import AboutUs from '@/components/LandingPage/AboutUs';
+import TopCryptos from '@/components/LandingPage/TopCryptos';
 
 export default function Home() {
   return (
