@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
+import { IoLogOutOutline } from 'react-icons/io5';
 
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,9 +26,9 @@ const Dropdown = () => {
           <button
             type="button"
             onClick={handleLogout}
-            className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
+            className="flex w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
           >
-            Logout
+            <IoLogOutOutline className='mt-1 mr-2'/> Logout
           </button>
         </div>
       )}

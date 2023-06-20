@@ -9,6 +9,7 @@ import SignIn from './SignIn';
 import { validateEmail } from '@/utils/validateEmail';
 import ErrorMessage from './ErrorMessage';
 import Button from './Button';
+import router from 'next/router';
 
 const SignUp = ({ onClose }: any) => {
   const [name, setName] = useState('');
@@ -41,25 +42,18 @@ const SignUp = ({ onClose }: any) => {
     const isValidEmail = validateEmail(email);
     if (!isValidEmail) {
       setEmailError('Invalid email');
-    } else {
-      setEmailError('');
-    }
-
-    if (password.length < 8) {
+      return;
+    } else if (password.length < 8) {
       setPasswordError('Password should be at least 6 characters long');
       return;
-    } else {
-      setPasswordError('');
-    }
-
-    if (password !== confirmPassword) {
+    } else if (password !== confirmPassword) {
       setConfirmPasswordError('Password and confirm password do not match');
       return;
     } else {
-      // After all the validation, the right thing is to create this in a database to validate a login
-      // How do this?
-      // Send via API to back-end to create in database
+      setEmailError('');
+      setPasswordError('');
       setConfirmPasswordError('');
+      router.push('/dashboard');
     }
   };
 

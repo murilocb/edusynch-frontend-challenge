@@ -37,7 +37,6 @@ const UserAvatar: React.FC = () => {
         <Image
           src="/svgs/CoinSynch.svg"
           alt="CoinSynch Logo"
-          className="ml-20"
           width={124}
           height={21}
           priority
