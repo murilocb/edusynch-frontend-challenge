@@ -1,9 +1,7 @@
 const Dashboard = () => {
   return (
-    <div className="w-full flex">
-      
-      
-    </div>
+    <main className="w-full flex">
+    </main>
   );
 };
 
