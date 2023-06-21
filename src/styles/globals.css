@@ -23,18 +23,24 @@ body {
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
+.slide {
+  display: flex;
+  flex-direction: row;
+  animation: slider 9s linear infinite;
+}
+
+.slide>div {
+  flex: 1;
+}
+
 @keyframes slider {
   0% {
     transform: translateX(100%);
   }
 
   100% {
-    transform: translateX(-180%);
+    transform: translateX(-190%);
   }
-}
-
-.slide {
-  animation: slider 9s linear infinite;
 }
 
 .bg-color-newsletter {

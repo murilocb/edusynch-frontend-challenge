@@ -69,14 +69,14 @@ export function ContentApresentation(props: Props) {
   return (
     <div
       id="home"
-      className="flex flex-col md:flex-row w-full pt-36 px-4 md:px-72 space-x-20 justify-center items-center"
+      className="flex flex-col md:flex-row w-full pt-12 px-4 md:px-8 xl:px-72 space-x-0 md:space-x-20 justify-center items-center"
     >
-      <div className="w-full ml-20">
-        <div className="w-full md:w-2/4 space-y-6">
-          <p className="text-customYellow text-5xl font-bold leading-snug">
+      <div className="w-full md:w-2/4 md:ml-20">
+        <div className="w-full md:w-3/4 space-y-6">
+          <p className="text-customYellow text-3xl md:text-5xl font-bold leading-snug">
             Lorem ipsum dolor sit amet, consectetur
           </p>
-          <p className="text-color-text text-xl leading-8">
+          <p className="text-color-text text-base md:text-xl leading-8">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
             purus sit amet luctus venenatis, lectus magna fringilla urna,
             porttitor
@@ -84,7 +84,7 @@ export function ContentApresentation(props: Props) {
         </div>
         <Button
           onClick={handleSignUpClick}
-          className="bg-customYellow w-full md:w-72 h-12 rounded-full text-white font-bold flex items-center justify-center mt-8 mb-4 md:mb-20"
+          className="bg-customYellow w-full md:w-72 h-10 md:h-12 rounded-full text-white font-bold flex items-center justify-center mt-4 md:mt-8 mb-2 md:mb-20"
         >
           SIGN UP NOW{' '}
           <div className="ml-2">
@@ -101,7 +101,7 @@ export function ContentApresentation(props: Props) {
           priority
         />
       </div>
-      <div className="w-full md:w-1/3 md:mt-0 md:mr-60 bg-white">
+      <div className="w-full md:w-1/3 md:mt-0 md:mr-10 bg-white">
         <Slider ref={sliderRef} {...settings}>
           <div>
             <Image
