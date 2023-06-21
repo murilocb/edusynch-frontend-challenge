@@ -28,18 +28,15 @@ const Newsletter = () => {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor',
   };
 
-  const handleEmailChange = (e: {
-    target: { value: React.SetStateAction<string> };
-  }) => {
+  const handleEmailChange = (e: { target: { value: React.SetStateAction<string>; }; }) => {
     setEmail(e.target.value);
   };
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setIsLoading(true);
-
     // Simulating an asynchronous action, e.g., API call
-    //const response = await axios.post('/endpoint', { email });
+    // const response = await axios.post('/endpoint', { email });
     // This is await for response server then after this do below i can use with try catch finally
 
     // Simulating an asynchronous action, e.g., API call

@@ -79,7 +79,7 @@ const SignUp = ({ onClose }: any) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white pt-12 pb-12 pl-12 pr-12 rounded-md shadow-md max-w-md">
+      <div className="bg-white pt-12 pb-12 pl-12 pr-12 rounded-md shadow-md max-w-md w-full">
         <div className="flex justify-end -mt-8 -mr-8">
           <Button onClick={handleClose} className="text-gray-600">
             <VscClose className="opacity-60" size={20} />

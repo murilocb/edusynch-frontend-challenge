@@ -21,7 +21,7 @@ const SignIn = ({ onClose }: any) => {
   const [
     showSignInModal,
     showSignUpModal,
-    showTransferpModal,
+    showTransferModal,
     showAddCryptoModal,
     handleOpenSignInModal,
     handleOpenSignUpModal,

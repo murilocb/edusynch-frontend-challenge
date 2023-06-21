@@ -11,7 +11,7 @@ export function Header(props: Props) {
   const [
     showSignInModal,
     showSignUpModal,
-    showTransferpModal,
+    showTransferModal,
     showAddCryptoModal,
     handleOpenSignInModal,
     handleOpenSignUpModal,
@@ -32,7 +32,7 @@ export function Header(props: Props) {
   };
 
   return (
-    <header className="flex justify-center items-center h-16 w-full px-96 mx-auto">
+    <header className="flex justify-center items-center h-16 w-full px-4 md:px-8 xl:px-96">
       <div className="flex space-x-8">
         <a href="#home">
           <Image
@@ -43,7 +43,7 @@ export function Header(props: Props) {
             priority
           />
         </a>
-        <div className="flex space-x-6">
+        <div className="flex md:space-x-6">
           <a
             href="#about-us"
             className="text-gray-700 text-base"

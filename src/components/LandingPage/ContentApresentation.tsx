@@ -23,7 +23,7 @@ export function ContentApresentation(props: Props) {
   const [
     showSignInModal,
     showSignUpModal,
-    showTransferpModal,
+    showTransferModal,
     showAddCryptoModal,
     handleOpenSignInModal,
     handleOpenSignUpModal,
@@ -67,58 +67,60 @@ export function ContentApresentation(props: Props) {
   }, []);
 
   return (
-    <div id="home" className="flex flex-col md:flex-row w-full pt-36 pl-72 space-x-20 justify-center items-center">
-    <div className="w-1/2">
-      <div className="w-2/4 space-y-6">
-        <p className="text-customYellow text-5xl font-bold leading-snug">
-          Lorem ipsum dolor sit amet, consectetur
-        </p>
-        <p className="text-color-text text-xl leading-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
-          purus sit amet luctus venenatis, lectus magna fringilla urna,
-          porttitor
-        </p>
+    <div
+      id="home"
+      className="flex flex-col md:flex-row w-full pt-36 px-4 md:px-72 space-x-20 justify-center items-center"
+    >
+      <div className="w-full ml-20">
+        <div className="w-full md:w-2/4 space-y-6">
+          <p className="text-customYellow text-5xl font-bold leading-snug">
+            Lorem ipsum dolor sit amet, consectetur
+          </p>
+          <p className="text-color-text text-xl leading-8">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
+            purus sit amet luctus venenatis, lectus magna fringilla urna,
+            porttitor
+          </p>
+        </div>
+        <Button
+          onClick={handleSignUpClick}
+          className="bg-customYellow w-full md:w-72 h-12 rounded-full text-white font-bold flex items-center justify-center mt-8 mb-4 md:mb-20"
+        >
+          SIGN UP NOW{' '}
+          <div className="ml-2">
+            <HiArrowSmallRight />
+          </div>
+        </Button>
+
+        {showSignUpModal && <SignUp onClose={handleCloseSignUpModal} />}
+        <Image
+          alt="Frame-24"
+          src="/images/Frame-24.png"
+          width={339}
+          height={40}
+          priority
+        />
       </div>
-      <Button
-        onClick={handleSignUpClick}
-        className="bg-customYellow w-72 h-12 rounded-full text-white font-bold flex items-center justify-center mt-8 mb-20" // Added mb-4 for bottom margin
-      >
-        SIGN UP NOW{' '}
-        <div className="ml-2">
-          <HiArrowSmallRight />
-        </div>
-      </Button>
-  
-      {showSignUpModal && <SignUp onClose={handleCloseSignUpModal} />}
-      <Image
-        alt="Frame-24"
-        src="/images/Frame-24.png"
-        width={339}
-        height={40}
-        priority
-      />
+      <div className="w-full md:w-1/3 md:mt-0 md:mr-60 bg-white">
+        <Slider ref={sliderRef} {...settings}>
+          <div>
+            <Image
+              alt="Carousel Image"
+              src="/images/Carousel.png"
+              width={500}
+              height={500}
+            />
+          </div>
+          <div>
+            <Image
+              alt="Carousel Image"
+              src="/images/Carousel.png"
+              width={500}
+              height={500}
+            />
+          </div>
+        </Slider>
+      </div>
     </div>
-    <div className="w-full md:w-1/3 md:mt-0 md:mr-60 bg-white">
-      <Slider ref={sliderRef} {...settings}>
-        <div>
-          <Image
-            alt="Carousel Image"
-            src="/images/Carousel.png"
-            width={500}
-            height={500}
-          />
-        </div>
-        <div>
-          <Image
-            alt="Carousel Image"
-            src="/images/Carousel.png"
-            width={500}
-            height={500}
-          />
-        </div>
-      </Slider>
-    </div>
-  </div>
-  
   );
 }

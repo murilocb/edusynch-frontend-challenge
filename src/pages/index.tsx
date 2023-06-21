@@ -10,11 +10,27 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between min-h-screen w-full bg-white">
       <Header />
-      <ContentApresentation />
-      <ContentApresentationImage />
-      <AboutUs />
-      <TopCryptos />
-      <Newsletter/>
+
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <ContentApresentation />
+      </div>
+
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <ContentApresentationImage />
+      </div>
+
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <AboutUs />
+      </div>
+
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <TopCryptos />
+      </div>
+
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <Newsletter />
+      </div>
+
       <Footer />
     </main>
   );

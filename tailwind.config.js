@@ -71,9 +71,6 @@ module.exports = {
         'color-black': '#000000',
         'color-text': '#5d6670',
       },
-      fontFamily: {
-        roboto: 'var(--font-roboto)',
-      },
       maxWidth: {
         'desktop': '1200px',
       },

@@ -25,4 +25,3 @@ export function HeaderCoins(props: Props) {
     </div>
   );
 }
-
