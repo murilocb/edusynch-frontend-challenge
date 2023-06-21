@@ -59,7 +59,7 @@ const SignIn = ({ onClose }: any) => {
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
       <div className="bg-white pt-12 pb-12 pl-12 pr-12 rounded-md shadow-md max-w-md w-full">
         <div className="flex justify-end -mt-8 -mr-8">
           <Button onClick={handleClose} className="text-gray-600">
@@ -68,13 +68,13 @@ const SignIn = ({ onClose }: any) => {
         </div>
         <div className="flex justify-center items-center mb-4 mt-2">
           <span className="text-xl">
-            Sign In To<span className="text-customYellow font-bold"> Coin</span>
+            Sign in to<span className="text-customYellow font-bold"> Coin</span>
             <span className="font-bold text-gray-400">Synch</span>
           </span>
         </div>
         <form onSubmit={handleSubmit}>
-          <div className="mb-4 relative">
-            <div className="flex items-center">
+          <div className="mb-4">
+            <div className="relative">
               <span className="absolute inset-y-0 left-0 pl-3 flex items-center">
                 <MdOutlineMailOutline
                   className="text-gray-400 opacity-40"
@@ -116,7 +116,7 @@ const SignIn = ({ onClose }: any) => {
           {emailOrPasswordError && (
             <ErrorMessage message={emailOrPasswordError} />
           )}
-          <div className="flex justify-end -mt-2 mb-4">
+          <div className="flex justify-end mb-4">
             <Link
               href={''}
               className="text-xs font-light text-gray-600 opacity-80"
@@ -127,9 +127,9 @@ const SignIn = ({ onClose }: any) => {
           <div className="flex justify-center">
             <Button
               type="submit"
-              className="bg-customYellow text-white w-full md:w-full h-10 md:h-12 rounded-full"
+              className="bg-customYellow text-white w-full h-10 rounded-full"
             >
-              Sign In
+              Sign in
             </Button>
           </div>
           <div className="flex justify-center items-center mt-4 -mb-6">

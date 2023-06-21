@@ -28,11 +28,13 @@ const Newsletter = () => {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor',
   };
 
-  const handleEmailChange = (e: { target: { value: React.SetStateAction<string>; }; }) => {
+  const handleEmailChange = (e: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     setEmail(e.target.value);
   };
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setIsLoading(true);
     // Simulating an asynchronous action, e.g., API call
@@ -51,13 +53,16 @@ const Newsletter = () => {
   return (
     <div className="w-full">
       <div className="bg-color-newsletter h-412 flex justify-center items-center mt-28">
-        <div>
-          <div className="flex">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row">
             <CustomContent
               classNames={dynamicClassNames}
               textContent={dynamicTextContent}
             />
-            <form onSubmit={handleSubmit} className="flex-auto w-96 ml-96">
+            <form
+              onSubmit={handleSubmit}
+              className="mt-8 md:mt-0 md:ml-8 w-full md:w-96"
+            >
               <label htmlFor="email" className="text-white block mb-1">
                 Email
               </label>

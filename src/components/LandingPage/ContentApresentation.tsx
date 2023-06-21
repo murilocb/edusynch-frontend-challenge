@@ -82,6 +82,7 @@ export function ContentApresentation(props: Props) {
             porttitor
           </p>
         </div>
+        <div className="flex">
         <Button
           onClick={handleSignUpClick}
           className="bg-customYellow w-full md:w-72 h-10 md:h-12 rounded-full text-white font-bold flex items-center justify-center mt-4 md:mt-8 mb-2 md:mb-20"
@@ -93,6 +94,7 @@ export function ContentApresentation(props: Props) {
         </Button>
 
         {showSignUpModal && <SignUp onClose={handleCloseSignUpModal} />}
+        </div>
         <Image
           alt="Frame-24"
           src="/images/Frame-24.png"

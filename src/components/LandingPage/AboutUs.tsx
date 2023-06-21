@@ -3,12 +3,13 @@ import Box from './Box';
 import Button from './Button';
 import CustomContent from './CustomContent';
 import SignUp from './SignUp';
+import Boxes from './Boxes';
 
 const AboutUs = () => {
   const [
     showSignInModal,
     showSignUpModal,
-    showTransferModal,
+    showTransferpModal,
     showAddCryptoModal,
     handleOpenSignInModal,
     handleOpenSignUpModal,
@@ -45,35 +46,28 @@ const AboutUs = () => {
   return (
     <div
       id="about-us"
-      className="flex w-full h-full pb-40 justify-center items-center mt-72 bg-gradient-to-b from-transparent to-[#F7F7F7]"
+      className="grid md:flex md:w-full md:h-full pb-40 justify-center items-center mt-40 md:mt-10 bg-gradient-to-b from-transparent to-[#F7F7F7]"
     >
-      <div className="grid grid-cols-2 gap-12">
-        <div className="col-span-1">
-          <Box imageSrc="/images/Bitcoin.png" altText="Bitcoin" />
-        </div>
-        <div className="col-span-1">
-          <Box imageSrc="/images/Crypto.png" altText="Crypto" />
-        </div>
-        <div className="-ml-64 mr-64 col-start-2 col-span-1">
-          <Box imageSrc="/images/Business.png" altText="Business" />
-        </div>
-        <div className="-ml-64 mr-64 col-start-3 col-span-1">
-          <Box imageSrc="/images/Devices.png" altText="Devices" />
-        </div>
+      <div className="grid md:hidden">
+        <CustomContent
+          classNames={dynamicClassNames}
+          textContent={dynamicTextContent}
+        />
       </div>
 
-      <div className="-ml-52">
+      <Boxes message={''} />
+
+      <div className="-ml-20 hidden md:grid">
         <CustomContent
           classNames={dynamicClassNames}
           textContent={dynamicTextContent}
         />
         <Button
           onClick={handleSignUpClick}
-          className="bg-customYellow w-44 h-12 rounded-full text-white flex items-center justify-center mt-8 mb-10"
+          className="bg-customYellow w-44 h-12 rounded-full text-white hidden md:flex items-center justify-center mt-8 mb-10"
         >
           Sign up now
         </Button>
-
         {showSignUpModal && <SignUp onClose={handleCloseSignUpModal} />}
       </div>
     </div>

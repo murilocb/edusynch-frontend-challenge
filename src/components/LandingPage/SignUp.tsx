@@ -73,46 +73,47 @@ const SignUp = ({ onClose }: any) => {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+
   const toggleConfirmPasswordVisibility = () => {
     setShowConfirmPassword(!showConfirmPassword);
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white pt-12 pb-12 pl-12 pr-12 rounded-md shadow-md max-w-md w-full">
-        <div className="flex justify-end -mt-8 -mr-8">
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
+      <div className="bg-white pt-8 pb-8 pl-6 pr-6 rounded-md shadow-md max-w-md w-full">
+        <div className="flex justify-end -mt-4 -mr-4">
           <Button onClick={handleClose} className="text-gray-600">
             <VscClose className="opacity-60" size={20} />
           </Button>
         </div>
-        <div className="flex justify-center items-center mb-6 mt-2">
-          <span className="text-xl">
+        <div className="flex justify-center items-center mb-4 mt-2">
+          <span className="text-lg">
             Sign Up To<span className="text-customYellow font-bold"> Coin</span>
             <span className="font-bold text-gray-400">Synch</span>
           </span>
         </div>
         <form onSubmit={handleSubmit}>
-          <div className="mb-6">
+          <div className="mb-4">
             <div className="relative">
               <span className="absolute inset-y-0 left-0 pl-3 flex items-center">
-                <BsPerson className="text-gray-400 opacity-40" size={20} />
+                <BsPerson className="text-gray-400 opacity-40" size={18} />
               </span>
               <input
                 type="text"
                 value={name}
                 onChange={e => setName(e.target.value)}
-                className="w-full border border-gray-300 pl-10 py-2 rounded"
+                className="w-full border border-gray-300 pl-9 py-2 rounded"
                 placeholder="Name"
                 required
               />
             </div>
           </div>
-          <div className="mb-6">
+          <div className="mb-4">
             <div className="relative">
               <span className="absolute inset-y-0 left-0 pl-3 flex items-center">
                 <MdOutlineMailOutline
                   className="text-gray-400 opacity-40"
-                  size={20}
+                  size={18}
                 />
               </span>
               <input
@@ -122,20 +123,20 @@ const SignUp = ({ onClose }: any) => {
                   setEmail(e.target.value);
                   setEmailError('');
                 }}
-                className="w-full border border-gray-300 pl-10 py-2 rounded"
+                className="w-full border border-gray-300 pl-9 py-2 rounded"
                 placeholder="Email"
                 required
               />
             </div>
           </div>
           {emailError && <ErrorMessage message={emailError} />}
-          <div className="mb-6 relative">
+          <div className="mb-4 relative">
             <div className="flex items-center">
               <span
                 className="absolute inset-y-0 left-0 pl-3 flex items-center"
                 style={{ top: '50%', transform: 'translateY(-50%)' }}
               >
-                <BiLock className="text-gray-400 opacity-40" size={20} />
+                <BiLock className="text-gray-400 opacity-40" size={18} />
               </span>
               <input
                 type={showPassword ? 'text' : 'password'}
@@ -144,7 +145,7 @@ const SignUp = ({ onClose }: any) => {
                   setPassword(e.target.value);
                   setPasswordError('');
                 }}
-                className="w-full border border-gray-300 pl-10 py-2 rounded"
+                className="w-full border border-gray-300 pl-9 py-2 rounded"
                 placeholder="Password"
                 required
               />
@@ -154,17 +155,17 @@ const SignUp = ({ onClose }: any) => {
               className="absolute top-1/3 right-2 text-gray-500 opacity-40"
               onClick={togglePasswordVisibility}
             >
-              {showPassword ? <BsEyeSlash /> : <BsEye />}
+              {showPassword ? <BsEyeSlash size={18} /> : <BsEye size={18} />}
             </Button>
           </div>
           {passwordError && <ErrorMessage message={passwordError} />}
-          <div className="mb-6 relative">
+          <div className="mb-4 relative">
             <div className="flex items-center">
               <span
                 className="absolute inset-y-0 left-0 pl-3 flex items-center"
                 style={{ top: '50%', transform: 'translateY(-50%)' }}
               >
-                <BiLock className="text-gray-400 opacity-40" size={20} />
+                <BiLock className="text-gray-400 opacity-40" size={18} />
               </span>
               <input
                 type={showConfirmPassword ? 'text' : 'password'}
@@ -173,7 +174,7 @@ const SignUp = ({ onClose }: any) => {
                   setConfirmPassword(e.target.value);
                   setConfirmPasswordError('');
                 }}
-                className="w-full border border-gray-300 pl-10 py-2 rounded"
+                className="w-full border border-gray-300 pl-9 py-2 rounded"
                 placeholder="Confirm password"
                 required
               />
@@ -183,13 +184,17 @@ const SignUp = ({ onClose }: any) => {
               className="absolute top-1/3 right-2 text-gray-500 opacity-40"
               onClick={toggleConfirmPasswordVisibility}
             >
-              {showConfirmPassword ? <BsEyeSlash /> : <BsEye />}
+              {showConfirmPassword ? (
+                <BsEyeSlash size={18} />
+              ) : (
+                <BsEye size={18} />
+              )}
             </Button>
           </div>
           {confirmPasswordError && (
             <ErrorMessage message={confirmPasswordError} />
           )}
-          <div className="mb-6">
+          <div className="mb-4">
             <label className="flex items-center">
               <input
                 type="checkbox"
@@ -218,7 +223,7 @@ const SignUp = ({ onClose }: any) => {
             </Button>
           </div>
         </form>
-        <div className="flex justify-center items-center mt-4 -mb-6">
+        <div className="flex justify-center items-center mt-4">
           <Button onClick={handleSignInClick}>
             <span className="text-sm font-light">
               Already have an account?

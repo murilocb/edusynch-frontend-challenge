@@ -7,7 +7,7 @@ export function ContentApresentationImage() {
         alt="Group-167"
         src="/images/Group-167.png"
         width={3840}
-        height={500}
+        height={900}
         layout='intrinsic'
       />
     </div>
