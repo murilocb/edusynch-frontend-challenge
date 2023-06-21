@@ -8,10 +8,14 @@ const AboutUs = () => {
   const [
     showSignInModal,
     showSignUpModal,
+    showTransferpModal,
+    showAddCryptoModal,
     handleOpenSignInModal,
     handleOpenSignUpModal,
     handleCloseSignUpModal,
     handleCloseSignInModal,
+    handleCloseTransferModal,
+    handleCloseAddCryptoModal,
   ] = useModal();
 
   const handleSignUpClick = () => {

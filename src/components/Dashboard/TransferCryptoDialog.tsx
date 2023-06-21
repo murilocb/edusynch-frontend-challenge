@@ -2,6 +2,7 @@ import { SetStateAction, useState } from 'react';
 import Button from '../LandingPage/Button';
 import { VscClose } from 'react-icons/vsc';
 import Image from 'next/image';
+import { useModal } from '@/utils/handleModals';
 
 const TransferCryptoDialog = ({ onClose }: any) => {
   const [transferType, setTransferType] = useState('');
@@ -80,13 +81,13 @@ const TransferCryptoDialog = ({ onClose }: any) => {
           onChange={handleQuantityChange}
         />
         <div className="flex items-center justify-center">
-          <button
+          <Button
             className="bg-customYellow text-white px-4 py-2 rounded-full w-full h-12 mt-4"
             onClick={handleTransferCrypto}
             disabled={!transferType || !quantity}
           >
             Transfer Crypto
-          </button>
+          </Button>
         </div>
       </div>
     </div>

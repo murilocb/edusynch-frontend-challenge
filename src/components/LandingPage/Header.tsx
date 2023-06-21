@@ -11,10 +11,14 @@ export function Header(props: Props) {
   const [
     showSignInModal,
     showSignUpModal,
+    showTransferpModal,
+    showAddCryptoModal,
     handleOpenSignInModal,
     handleOpenSignUpModal,
     handleCloseSignUpModal,
     handleCloseSignInModal,
+    handleCloseTransferModal,
+    handleCloseAddCryptoModal,
   ] = useModal();
 
   const handleSignUpClick = () => {

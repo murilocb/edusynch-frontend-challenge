@@ -26,10 +26,14 @@ const SignUp = ({ onClose }: any) => {
   const [
     showSignInModal,
     showSignUpModal,
+    showTransferpModal,
+    showAddCryptoModal,
     handleOpenSignInModal,
     handleOpenSignUpModal,
     handleCloseSignUpModal,
     handleCloseSignInModal,
+    handleCloseTransferModal,
+    handleCloseAddCryptoModal,
   ] = useModal();
 
   const handleSignInClick = () => {

@@ -32,8 +32,8 @@ const UserAvatar: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center w-full h-16 bg-white">
-      <div>
+    <div className="flex items-center justify-center w-full h-16 bg-white shadow-md mb-px">
+      <div className='ml-10'>
         <Image
           src="/svgs/CoinSynch.svg"
           alt="CoinSynch Logo"

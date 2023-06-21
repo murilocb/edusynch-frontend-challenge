@@ -23,10 +23,14 @@ export function ContentApresentation(props: Props) {
   const [
     showSignInModal,
     showSignUpModal,
+    showTransferpModal,
+    showAddCryptoModal,
     handleOpenSignInModal,
     handleOpenSignUpModal,
     handleCloseSignUpModal,
     handleCloseSignInModal,
+    handleCloseTransferModal,
+    handleCloseAddCryptoModal,
   ] = useModal();
 
   const handleSignUpClick = () => {

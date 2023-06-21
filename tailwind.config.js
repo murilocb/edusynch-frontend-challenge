@@ -23,6 +23,7 @@ module.exports = {
       height: {
         '412': '412px',
         '424': '424px',
+        '592': '592px',
         '848': '848px',
       },
       margin: {
@@ -74,7 +75,7 @@ module.exports = {
         roboto: 'var(--font-roboto)',
       },
       maxWidth: {
-        'constraint-main-col': '1200px',
+        'desktop': '1200px',
       },
       screens: {
         tablet: '768px',
