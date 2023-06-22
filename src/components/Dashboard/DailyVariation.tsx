@@ -39,7 +39,7 @@ const DailyVariation: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-white p-4 rounded-md h-auto md:h-32 w-full md:w-592 flex flex-row md:flex-row shadow-md space-y-4 md:space-y-0 md:space-x-6">
+    <div className="bg-white p-4 rounded-md h-auto md:h-32 w-full md:w-592 flex flex-col md:flex-row shadow-md space-y-4 md:space-y-0 md:space-x-6">
       <div className="flex justify-center">
         <h3 className="text-color-secondary-500 text-base md:text-xs font-roboto">
           Daily Variation
