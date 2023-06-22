@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 interface Props {}
 
 export function Footer(props: Props) {
