@@ -33,7 +33,7 @@ const UserAvatar: React.FC = () => {
 
   return (
     <div className="flex items-center justify-center w-full h-16 bg-white shadow-md mb-px">
-      <div className="md:ml-10 ml-auto -mr-32">
+      <div className="md:ml-10 ml-auto -mr-24">
         <Image
           src="/svgs/CoinSynch.svg"
           alt="CoinSynch Logo"
@@ -42,7 +42,7 @@ const UserAvatar: React.FC = () => {
           priority
         />
       </div>
-      <div className="flex justify-end ml-auto mr-4 md:mr-20">
+      <div className="flex justify-end ml-auto mr-4 md:mr-12">
         {userData ? (
           <>
             <div className="md:flex items-center ml-4">

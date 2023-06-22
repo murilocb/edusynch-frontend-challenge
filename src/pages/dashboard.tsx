@@ -11,14 +11,14 @@ const Dashboard = () => {
     <main className="flex flex-wrap bg-slate-100">
       <UserAvatar />
       <Sidebar />
-      <div className="flex flex-row lg:flex-row lg:mt-10 lg:space-x-12">
-        <div className="lg:ml-24">
+      <div className="flex flex-col lg:flex-row lg:flex-1 lg:ml-24 lg:space-x-12">
+        <div className="mt-8 lg:mt-0">
           <Balance />
         </div>
-        <div className="w-full lg:w-auto">
+        <div className="md:mt-8 md:w-full lg:w-auto">
           <DailyVariation />
         </div>
-        <div className="hidden lg:block">
+        <div className="lg:block lg:self-end">
           <Image
             className="-mt-2 h-40 w-592"
             alt="NftNews"
@@ -28,9 +28,9 @@ const Dashboard = () => {
             priority
           />
         </div>
-      </div>
-      <div className="absolute mt-72 ml-56">
+      <div className="w-full ml-12 mt-8 lg:mt-0 lg:absolute lg:ml-56">
         <MyWallet />
+      </div>
       </div>
       <Footer />
     </main>

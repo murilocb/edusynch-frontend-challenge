@@ -11,9 +11,9 @@ const Sidebar = () => {
   const router = useRouter();
   const [showContent, setShowContent] = useState(true);
   const [showAllItems, setShowAllItems] = useState(false);
-  const topButton =  showAllItems ? '-ml-40' : '-ml-10';
+  const topButton = showAllItems ? 'ml-2' : 'ml-6';
   const buttonWidth = showAllItems ? 'w-48' : 'w-16';
-  const tableText =  showAllItems ? 'flex' : 'hidden';
+  const tableText = showAllItems ? 'flex' : 'hidden';
 
   const handleShowContent = () => {
     setShowContent(true);
@@ -61,7 +61,9 @@ const Sidebar = () => {
                     height={32}
                     priority
                   />
-                  <span className={`${tableText} ml-3 text-color-text`}>Lorem Ipsum</span>
+                  <span className={`${tableText} ml-3 text-color-text`}>
+                    Lorem Ipsum
+                  </span>
                 </button>
               </li>
               <li>
@@ -80,7 +82,9 @@ const Sidebar = () => {
                     height={32}
                     priority
                   />
-                  <span className={`${tableText} ml-3 text-color-text`}>Lorem Ipsum</span>
+                  <span className={`${tableText} ml-3 text-color-text`}>
+                    Lorem Ipsum
+                  </span>
                 </button>
               </li>
               <li>
@@ -99,7 +103,9 @@ const Sidebar = () => {
                     height={32}
                     priority
                   />
-                  <span className={`${tableText} ml-3 text-color-text`}>Lorem Ipsum</span>
+                  <span className={`${tableText} ml-3 text-color-text`}>
+                    Lorem Ipsum
+                  </span>
                 </button>
               </li>
               <li>
@@ -119,7 +125,9 @@ const Sidebar = () => {
                     height={32}
                     priority
                   />
-                  <span className={`${tableText} ml-3 text-color-text`}>Lorem Ipsum</span>
+                  <span className={`${tableText} ml-3 text-color-text`}>
+                    Lorem Ipsum
+                  </span>
                 </button>
               </li>
               <li>
@@ -147,7 +155,7 @@ const Sidebar = () => {
           />
         </div>
       )}
-      <div className={`md:hidden -mt-10 ${topButton}`}>
+      <div className={`md:hidden absolute mt-6 ${topButton}`}>
         {!showContent && (
           <Button
             onClick={handleShowContent}

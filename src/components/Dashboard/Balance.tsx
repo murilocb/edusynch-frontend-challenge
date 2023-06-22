@@ -19,7 +19,7 @@ const Balance = () => {
   }, []);
 
   return (
-    <div className="bg-white rounded-md h-32 md:w-592 flex flex-col md:flex-row md:items-center md:ml-12 shadow-md">
+    <div className="bg-white rounded-md h-32 w-auto md:w-592 flex flex-row md:flex-row md:items-center md:ml-20 shadow-md">
       <div className="hidden md:flex -mr-16">
         <Image
           className="m-6"
