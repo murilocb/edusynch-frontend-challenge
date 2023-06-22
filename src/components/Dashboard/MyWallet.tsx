@@ -59,8 +59,7 @@ const MyWallet = () => {
 
   return (
     <div className="flex flex-col bg-white shadow-md p-8 md:p-8 m-px">
-      <p className="font-bold text-5xl md:mb-20 text-color-text flex">
-        {' '}
+      <p className="font-bold text-5xl md:mb-20 text-color-text flex items-center">
         <Image
           className="mr-3 md:mr-4"
           src="/images/WalletCrypto.png"
@@ -78,7 +77,7 @@ const MyWallet = () => {
         )}
       </p>
       <div className="overflow-x-auto">
-        <table className="table-auto w-full md:w-1440">
+        <table className="table-auto w-full md:w-full md:h-424 lg:w-1440">
           <thead>
             <tr>
               <th className="py-2 text-color-text font-extralight">#</th>
@@ -88,8 +87,6 @@ const MyWallet = () => {
               <th className="py-2 text-color-text font-extralight">Trade</th>
             </tr>
           </thead>
-        </table>
-        <table className="w-full md:h-424">
           <tbody>
             {data.map((item, index) => (
               <tr
@@ -98,23 +95,23 @@ const MyWallet = () => {
                   index % 2 === 0 ? 'bg-gray-100' : ''
                 } hover:bg-gray-300`}
               >
-                <td className="py-2 pl-2 md:pl-4">
+                <td className="py-2 pl-2 md:pl-4 text-center">
                   {index < 9 ? '0' + item.id : item.id}
                 </td>
-                <td className="py-2 pl-1 md:pl-4">{item.crypto}</td>
-                <td className="py-2 pl-1 md:pl-4">{item.price}</td>
+                <td className="py-2 pl-1 md:pl-4 text-center">{item.crypto}</td>
+                <td className="py-2 pl-1 md:pl-4 text-center">{item.price}</td>
                 <td
                   className={`py-2 pl-1 md:pl-4 ${
                     item.change.includes('-')
                       ? 'text-red-500'
                       : 'text-green-500'
-                  }`}
+                  } text-center`}
                 >
                   {item.change}
                 </td>
-                <td className="py-2 pl-1 md:pl-4">
+                <td className="py-2 pl-1 md:pl-4 text-center">
                   <Button
-                    className="-mr-6 py-1 px-2 md:px-4 text-color-text"
+                    className="py-1 px-2 md:px-4 text-color-text"
                     onClick={() => handleBuy(item.crypto)}
                   >
                     <GiTrade />
