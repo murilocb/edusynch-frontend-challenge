@@ -26,10 +26,12 @@ const SignUp = ({ onClose }: any) => {
   const [
     showSignInModal,
     showSignUpModal,
-    showTransferpModal,
+    showTransferModal,
     showAddCryptoModal,
     handleOpenSignInModal,
     handleOpenSignUpModal,
+    handleOpenTransferModal,
+    handleOpenAddCryptoModal,
     handleCloseSignUpModal,
     handleCloseSignInModal,
     handleCloseTransferModal,

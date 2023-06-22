@@ -27,6 +27,8 @@ export function ContentApresentation(props: Props) {
     showAddCryptoModal,
     handleOpenSignInModal,
     handleOpenSignUpModal,
+    handleOpenTransferModal,
+    handleOpenAddCryptoModal,
     handleCloseSignUpModal,
     handleCloseSignInModal,
     handleCloseTransferModal,

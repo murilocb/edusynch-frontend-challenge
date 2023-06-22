@@ -2,7 +2,6 @@ import { SetStateAction, useState } from 'react';
 import Button from '../LandingPage/Button';
 import { VscClose } from 'react-icons/vsc';
 import Image from 'next/image';
-import { useModal } from '@/utils/handleModals';
 
 const TransferCryptoDialog = ({ onClose }: any) => {
   const [transferType, setTransferType] = useState('');

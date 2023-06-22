@@ -19,6 +19,8 @@ export function Header(props: Props) {
     showAddCryptoModal,
     handleOpenSignInModal,
     handleOpenSignUpModal,
+    handleOpenTransferModal,
+    handleOpenAddCryptoModal,
     handleCloseSignUpModal,
     handleCloseSignInModal,
     handleCloseTransferModal,

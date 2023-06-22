@@ -3,7 +3,7 @@ import { useState } from "react";
 export const useModal = () => {
   const [showSignInModal, setShowSignInModal] = useState(false);
   const [showSignUpModal, setShowSignUpModal] = useState(false);
-  const [showTransferpModal, setShowTransferModal] = useState(false);
+  const [showTransferModal, setShowTransferModal] = useState(false);
   const [showAddCryptoModal, setShowAddCryptoModal] = useState(false);
 
   const handleOpenSignInModal = () => {
@@ -38,5 +38,16 @@ export const useModal = () => {
     setShowAddCryptoModal(false);
   };
 
-  return [showSignInModal, showSignUpModal, showTransferpModal, showAddCryptoModal, handleOpenSignInModal, handleOpenSignUpModal, handleCloseSignUpModal, handleCloseSignInModal, handleCloseTransferModal, handleCloseAddCryptoModal] as const;
+  return [showSignInModal,
+    showSignUpModal,
+    showTransferModal,
+    showAddCryptoModal,
+    handleOpenSignInModal,
+    handleOpenSignUpModal,
+    handleOpenTransferModal,
+    handleOpenAddCryptoModal,
+    handleCloseSignUpModal,
+    handleCloseSignInModal,
+    handleCloseTransferModal,
+    handleCloseAddCryptoModal,] as const;
 };

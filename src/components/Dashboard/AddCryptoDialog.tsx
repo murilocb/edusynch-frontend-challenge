@@ -7,14 +7,12 @@ const AddCryptoDialog = ({ onClose }: any) => {
   const [quantity, setQuantity] = useState('');
 
   // Fetch crypto options from API
-  // For example:
   // const fetchCryptoOptions = async () => {
   //   const response = await fetch('/api/cryptos');
   //   const data = await response.json();
   //   // Set the data to a state variable or pass it as a prop to the component
   // };
   // fetchCryptoOptions();
-  // Replace the above code with your API logic to fetch the crypto options
   // and set them to a state variable or pass them as a prop to the component.
   // For demonstration purposes, I'll use a static array of options here:
   const staticCryptoOptions = [
@@ -57,7 +55,7 @@ const AddCryptoDialog = ({ onClose }: any) => {
             <VscClose className="opacity-60" size={20} />
           </Button>
         </div>
-        <h3 className="text-color-text text-2xl font-semibold mb-8 ml-4">
+        <h3 className="text-color-text text-2xl font-semibold mb-8 ml-4 items-center justify-center">
           Add Crypto
         </h3>
         <select

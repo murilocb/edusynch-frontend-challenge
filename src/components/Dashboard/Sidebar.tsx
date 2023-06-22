@@ -113,7 +113,6 @@ const Sidebar = () => {
                   type="button"
                   onClick={() => handleNavigation('/dashboard/business')}
                   className="flex items-center p-2 md:p-4"
-                  data-tip="Lorem Ipsum"
                   data-tooltip-id="tooltip"
                   data-tooltip-content="Lorem Ipsum"
                   data-tooltip-place="right"

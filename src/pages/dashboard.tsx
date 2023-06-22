@@ -11,7 +11,7 @@ const Dashboard = () => {
     <main className="flex flex-wrap bg-slate-100">
       <UserAvatar />
       <Sidebar />
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row md:ml-32">
         <div className="mt-8 lg:mt-0">
           <Balance />
         </div>

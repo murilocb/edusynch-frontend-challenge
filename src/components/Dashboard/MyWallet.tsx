@@ -4,46 +4,47 @@ import Button from '../LandingPage/Button';
 import { useModal } from '@/utils/handleModals';
 import AddCryptoDialog from './AddCryptoDialog';
 import { GiTrade } from 'react-icons/gi';
+import TransferCryptoDialog from './TransferCryptoDialog';
+import { Tooltip } from 'react-tooltip';
+import formatCurrency from '@/utils/formatCurrency';
 
 const MyWallet = () => {
   const initialData = [
     {
       id: 1,
       crypto: 'Bitcoin',
-      price: '$45,678',
+      price: '45.678',
       change: '+2.56%',
-      trade: 'Buy',
     },
     {
       id: 2,
       crypto: 'Ethereum',
-      price: '$2,345',
+      price: '2.345',
       change: '-1.23%',
-      trade: 'Sell',
     },
     {
       id: 3,
       crypto: 'Litecoin',
-      price: '$178',
+      price: '178',
       change: '+0.57%',
-      trade: 'Buy',
     },
     {
       id: 4,
       crypto: 'Ripple',
-      price: '$0.785',
+      price: '0.785',
       change: '-0.89%',
-      trade: 'Sell',
     },
   ];
 
   const [
     showSignInModal,
     showSignUpModal,
-    showTransferpModal,
+    showTransferModal,
     showAddCryptoModal,
     handleOpenSignInModal,
     handleOpenSignUpModal,
+    handleOpenTransferModal,
+    handleOpenAddCryptoModal,
     handleCloseSignUpModal,
     handleCloseSignInModal,
     handleCloseTransferModal,
@@ -55,11 +56,16 @@ const MyWallet = () => {
   const handleBuy = (crypto: string) => {
     // Handle buy logic for the specific crypto
     console.log(`Buying ${crypto}`);
+    handleOpenTransferModal();
+  };
+
+  const handleCryptoDialogClick = () => {
+    handleOpenAddCryptoModal();
   };
 
   return (
     <div className="flex flex-col bg-white shadow-md p-8 md:p-8 m-px mb-16">
-      <p className="font-bold text-5xl md:mb-20 text-color-text flex items-center">
+      <p className="md:mb-20 text-color-text flex items-center">
         <Image
           className="mr-3 md:mr-4"
           src="/images/WalletCrypto.png"
@@ -68,8 +74,11 @@ const MyWallet = () => {
           height={32}
           priority
         />
-        My Wallet
-        <Button className="text-sm font-roboto flex items-center justify-center bg-customYellow rounded-full h-8 md:h-10 w-28 md:w-36 text-white ml-auto">
+        <span className="font-bold text-5xl">My Wallet</span>
+        <Button
+          onClick={handleCryptoDialogClick}
+          className="text-sm font-roboto flex items-center justify-center bg-customYellow rounded-full h-8 md:h-10 w-28 md:w-36 text-white ml-auto"
+        >
           + Add Crypto
         </Button>
         {showAddCryptoModal && (
@@ -99,28 +108,40 @@ const MyWallet = () => {
                   {index < 9 ? '0' + item.id : item.id}
                 </td>
                 <td className="py-2 pl-1 md:pl-4 text-center">{item.crypto}</td>
-                <td className="py-2 pl-1 md:pl-4 text-center">{item.price}</td>
+                <td className="py-2 pl-1 md:pl-4 text-center">{formatCurrency(Number(item.price))}</td>
                 <td
                   className={`py-2 pl-1 md:pl-4 ${
                     item.change.includes('-')
-                      ? 'text-red-500'
+                      ? 'text-color-text'
                       : 'text-green-500'
                   } text-center`}
                 >
-                  {item.change}
+                  {item.change.includes('-') ? 0 : item.change}
                 </td>
                 <td className="py-2 pl-1 md:pl-4 text-center">
                   <Button
                     className="py-1 px-2 md:px-4 text-color-text"
                     onClick={() => handleBuy(item.crypto)}
+                    data-tooltip-id="tooltip-wallet"
+                    data-tooltip-content="Transfer Crypto"
+                    data-tooltip-place="bottom"
                   >
                     <GiTrade />
                   </Button>
+                  {showTransferModal && (
+                    <TransferCryptoDialog onClose={handleCloseTransferModal} />
+                  )}
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
+        <Tooltip
+          id="tooltip-wallet"
+          place="right"
+          className='absolute'
+          style={{ backgroundColor: '#FBAB34', color: '#FFFF' }}
+        />
       </div>
     </div>
   );

@@ -25,6 +25,8 @@ const SignIn = ({ onClose }: any) => {
     showAddCryptoModal,
     handleOpenSignInModal,
     handleOpenSignUpModal,
+    handleOpenTransferModal,
+    handleOpenAddCryptoModal,
     handleCloseSignUpModal,
     handleCloseSignInModal,
     handleCloseTransferModal,
