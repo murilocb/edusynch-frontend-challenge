@@ -58,7 +58,7 @@ const MyWallet = () => {
   };
 
   return (
-    <div className="flex flex-col bg-white shadow-md p-8 md:p-8 m-px">
+    <div className="flex flex-col bg-white shadow-md p-8 md:p-8 m-px mb-16">
       <p className="font-bold text-5xl md:mb-20 text-color-text flex items-center">
         <Image
           className="mr-3 md:mr-4"
@@ -77,7 +77,7 @@ const MyWallet = () => {
         )}
       </p>
       <div className="overflow-x-auto">
-        <table className="table-auto w-full md:w-full md:h-424 lg:w-1440">
+        <table className="table-auto md:w-1055 w-full h-424 md:h-424">
           <thead>
             <tr>
               <th className="py-2 text-color-text font-extralight">#</th>

@@ -19,8 +19,8 @@ const Balance = () => {
   }, []);
 
   return (
-    <div className="bg-white rounded-md h-32 w-auto md:w-592 flex flex-row md:flex-row md:items-center md:ml-20 shadow-md">
-      <div className="hidden md:flex -mr-16">
+    <div className="bg-white rounded-md h-28 w-auto ml-6 md:w-auto flex flex-row md:mt-10 md:flex-row md:items-center shadow-md">
+      <div className="flex -mr-8">
         <Image
           className="m-6"
           alt="Balance"
@@ -30,7 +30,7 @@ const Balance = () => {
           priority
         />
       </div>
-      <div className="flex flex-col justify-center flex-grow p-6 md:p-16">
+      <div className="flex flex-col justify-center flex-grow p-10 md:p-10">
         <h3 className="text-color-secondary-500 text-lg md:text-xl font-semibold mb-1">
           Balance in US$
         </h3>
@@ -38,7 +38,7 @@ const Balance = () => {
           (approximately)
         </span>
       </div>
-      <div className="bg-color-primary-100 flex items-center justify-center p-6 md:p-16">
+      <div className="bg-color-primary-100 flex items-center justify-center p-6 md:p-10">
         <p className="text-2xl md:text-3xl font-bold text-color-text">
           {formatCurrency(balance)}
         </p>

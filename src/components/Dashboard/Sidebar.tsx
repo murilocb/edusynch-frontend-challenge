@@ -11,7 +11,7 @@ const Sidebar = () => {
   const router = useRouter();
   const [showContent, setShowContent] = useState(true);
   const [showAllItems, setShowAllItems] = useState(false);
-  const topButton = showAllItems ? 'ml-2' : 'ml-6';
+  const topButton = showAllItems ? 'ml-6' : 'ml-6';
   const buttonWidth = showAllItems ? 'w-48' : 'w-16';
   const tableText = showAllItems ? 'flex' : 'hidden';
 
