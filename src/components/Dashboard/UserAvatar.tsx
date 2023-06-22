@@ -33,7 +33,7 @@ const UserAvatar: React.FC = () => {
 
   return (
     <div className="flex items-center justify-center w-full h-16 bg-white shadow-md mb-px">
-      <div className='ml-10'>
+      <div className="md:ml-10 ml-auto -mr-32">
         <Image
           src="/svgs/CoinSynch.svg"
           alt="CoinSynch Logo"
@@ -42,24 +42,28 @@ const UserAvatar: React.FC = () => {
           priority
         />
       </div>
-      {userData ? (
-        <div className="flex justify-end ml-auto mr-20">
-          <Image
-            src={userData.avatar}
-            alt={userData.name}
-            className="rounded-full"
-            width={40}
-            height={40}
-            priority
-          />
-          <span className="ml-2 mt-2 text-gray-800">{userData.name}</span>
-          <Dropdown />
-        </div>
-      ) : (
-        <div className="flex justify-end ml-auto mr-20">
+      <div className="flex justify-end ml-auto mr-4 md:mr-20">
+        {userData ? (
+          <>
+            <div className="md:flex items-center ml-4">
+              <Image
+                src={userData.avatar}
+                alt={userData.name}
+                className="rounded-full"
+                width={40}
+                height={40}
+                priority
+              />
+              <span className="hidden md:flex ml-2 text-gray-800">{userData.name}</span>
+            </div>
+            <div className="md:flex flex items-center">
+              <Dropdown />
+            </div>
+          </>
+        ) : (
           <span className="text-gray-800">Loading...</span>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
