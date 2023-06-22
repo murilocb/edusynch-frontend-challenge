@@ -41,14 +41,14 @@ const TransferCryptoDialog = ({ onClose }: any) => {
             <VscClose className="opacity-60" size={20} />
           </Button>
         </div>
-        <h3 className="text-color-text text-2xl font-semibold mb-8 ml-24">
+        <h3 className="text-color-text text-2xl font-semibold mb-8 ml-4">
           Transfer Crypto
         </h3>
         <div className="flex mb-4 items-center justify-center">
           <span className="flex items-center justify-center text-color-secondary-400">
-            You are transfering
+            You are transferring
             <Image
-              className="ml-6"
+              className="ml-2"
               alt="BitcoinMini"
               src="/images/BitcoinMini.png"
               width={24}
@@ -56,7 +56,7 @@ const TransferCryptoDialog = ({ onClose }: any) => {
               priority
             />
             <span className="ml-2 text-black">
-              Bitcoin{' '}<span className='text-color-secondary-500'>BTC</span>
+              Bitcoin <span className="text-color-secondary-500">BTC</span>
             </span>
           </span>
         </div>

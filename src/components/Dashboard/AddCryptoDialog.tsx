@@ -2,7 +2,7 @@ import { SetStateAction, useState } from 'react';
 import Button from '../LandingPage/Button';
 import { VscClose } from 'react-icons/vsc';
 
-const AddCryptoDialog =( { onClose }: any) => {
+const AddCryptoDialog = ({ onClose }: any) => {
   const [selectedCrypto, setSelectedCrypto] = useState('');
   const [quantity, setQuantity] = useState('');
 
@@ -25,7 +25,9 @@ const AddCryptoDialog =( { onClose }: any) => {
     'USD Coin',
   ];
 
-  const handleSelectCrypto = (e: { target: { value: SetStateAction<string>; }; }) => {
+  const handleSelectCrypto = (e: {
+    target: { value: SetStateAction<string> };
+  }) => {
     setSelectedCrypto(e.target.value);
   };
 
@@ -42,7 +44,7 @@ const AddCryptoDialog =( { onClose }: any) => {
     // You can access the selected crypto using the `selectedCrypto` state variable.
     console.log('Adding crypto:', selectedCrypto);
   };
-  
+
   const handleClose = () => {
     onClose();
   };
@@ -50,12 +52,12 @@ const AddCryptoDialog =( { onClose }: any) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-white p-8 rounded-md max-w-md">
-      <div className="flex justify-end -mt-5 -mr-5">
+        <div className="flex justify-end -mt-5 -mr-5">
           <Button onClick={handleClose} className="text-gray-600">
             <VscClose className="opacity-60" size={20} />
           </Button>
         </div>
-        <h3 className="text-color-text text-2xl font-semibold mb-8 ml-32">
+        <h3 className="text-color-text text-2xl font-semibold mb-8 ml-4">
           Add Crypto
         </h3>
         <select
@@ -64,7 +66,7 @@ const AddCryptoDialog =( { onClose }: any) => {
           onChange={handleSelectCrypto}
         >
           <option value="">Choose Crypto</option>
-          {staticCryptoOptions.map((crypto) => (
+          {staticCryptoOptions.map(crypto => (
             <option key={crypto} value={crypto}>
               {crypto}
             </option>
